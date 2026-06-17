@@ -15,7 +15,7 @@ A clean, modern, and responsive multiple-choice quiz app built as a beginner pro
 
 ## Live Demo
 
-[View Live Demo](https://your-username.github.io/quiz-app/)
+[View Live Demo](https://softdevbyasadali.github.io/Quiz-App/)
 <!-- Replace the link above with your real GitHub Pages link -->
 
 ## Features

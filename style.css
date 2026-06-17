@@ -1,0 +1,154 @@
+/* ====== GLOBAL RESET ====== */
+/* Removes default spacing so all browsers match */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* width includes padding and border */
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  /* Purple gradient background */
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;     /* vertical center */
+  justify-content: center; /* horizontal center */
+  padding: 20px;
+}
+
+/* ====== QUIZ CONTAINER ====== */
+.quiz-container {
+  background: #fff;
+  width: 100%;
+  max-width: 500px;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  text-align: center;
+  color: #5a3d8a;
+  margin-bottom: 25px;
+}
+
+/* ====== PROGRESS TEXT ====== */
+.progress {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* ====== QUESTION TEXT ====== */
+.question {
+  color: #2d3436;
+  margin-bottom: 25px;
+  font-size: 22px;
+}
+
+/* ====== OPTIONS ====== */
+.options {
+  display: flex;
+  flex-direction: column;  /* stack options vertically */
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* Each answer button */
+.option {
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 16px;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Hover effect (only before answering) */
+.option:hover {
+  border-color: #764ba2;
+  background: #f5f3fb;
+}
+
+/* Green for the correct answer */
+.option.correct {
+  background: #00b894;
+  color: #fff;
+  border-color: #00b894;
+}
+
+/* Red for a wrong answer */
+.option.wrong {
+  background: #ff6b6b;
+  color: #fff;
+  border-color: #ff6b6b;
+}
+
+/* ====== NEXT BUTTON ====== */
+.next-btn {
+  width: 100%;
+  padding: 14px;
+  background: #764ba2;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: none;           /* hidden until an answer is picked */
+}
+
+.next-btn:hover {
+  background: #5a3d8a;
+}
+
+/* ====== RESULT SCREEN ====== */
+#resultScreen {
+  text-align: center;
+}
+
+#resultScreen h2 {
+  color: #5a3d8a;
+  margin-bottom: 20px;
+}
+
+.score-text {
+  font-size: 20px;
+  margin-bottom: 25px;
+  color: #2d3436;
+}
+
+.restart-btn {
+  padding: 14px 30px;
+  background: #00b894;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.restart-btn:hover {
+  background: #00d2a8;
+  transform: scale(1.05);
+}
+
+/* ====== HELPER CLASS ====== */
+/* Add this class to hide any element */
+.hidden {
+  display: none;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 480px) {
+  .quiz-container {
+    padding: 25px;
+  }
+  .question {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Makes the page responsive on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Main box that holds the quiz -->
+  <div class="quiz-container">
+
+    <h1>🧠 Quick Quiz</h1>
+
+    <!-- ====== QUIZ SCREEN ====== -->
+    <!-- This shows the questions and options -->
+    <div id="quizScreen">
+
+      <!-- A small progress line: e.g. "Question 1 of 5" -->
+      <p class="progress" id="progress">Question 1 of 5</p>
+
+      <!-- The question text -->
+      <h2 class="question" id="questionText">Question goes here</h2>
+
+      <!-- The answer buttons are added here by JavaScript -->
+      <div class="options" id="options"></div>
+
+      <!-- Next button (hidden until an answer is chosen) -->
+      <button class="next-btn" id="nextBtn">Next</button>
+    </div>
+
+    <!-- ====== RESULT SCREEN ====== -->
+    <!-- This is hidden until the quiz finishes -->
+    <div id="resultScreen" class="hidden">
+      <h2>🎉 Quiz Completed!</h2>
+      <p class="score-text" id="scoreText">You scored 0 out of 5</p>
+      <button class="restart-btn" id="restartBtn">Restart Quiz</button>
+    </div>
+
+  </div>
+
+  <!-- Link to our JavaScript (at the end so the page loads first) -->
+  <script src="script.js"></script>
+</body>
+</html>
